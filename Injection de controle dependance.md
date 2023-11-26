@@ -40,6 +40,10 @@ Mais il a aussi la dépendance lorsqu’une méthode de A  appelle une méthode 
 | ![interfaceInjection](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/interfaceInjection.png?raw=true) |
 |--------------------------------------------------------------------------------------------------------------------------------------|
 
+#### Avantages :
+- Flexibilité : L'attribut de dépendance peut contenir n'importe quels objets tant que sa classe implémente l'interface
+#### Désavantages :
+- Complexité : Réduit la clarté du code, surtout dans le cas où il y a plusieurs dépendances.
 
 ### L'injection par mutateur
 > Un mutateur est une méthode de la classe qui permet de modifier la valeur d’un attribut
@@ -47,6 +51,10 @@ Mais il a aussi la dépendance lorsqu’une méthode de A  appelle une méthode 
 | ![mutateurInjection](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/mutateurInjection.png?raw=true) |
 |--------------------------------------------------------------------------------------------------------------------------------------|
 
+#### Avantages :
+- Flexibilité : Permet de modifier une dépendance d'un objet après son instanciation, ce qui offre la possibilité de changer plusieurs la dépendance de l'objet durant l'execution.
+#### Désavantages :
+- Null Pointer Exeption : La dépendance peut être appelé alors qu'elle n'a pas encore été intialisé ce qui peut créer des erreurs.
 
 ## Utilisation
 En mettant en œuvre le principe de l'inversion de contrôle, l'injection de dépendances permet de créer dynamiquement les relations entre objets. Ainsi, les
