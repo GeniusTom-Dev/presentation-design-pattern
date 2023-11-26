@@ -12,6 +12,12 @@ Le principe de l'injection de dépendance (DI - Dependency Injection) en Java es
 
 Dans le contexte de Java, cela implique que les dépendances d'un objet sont injectées en lui plutôt que d'être instanciées à l'intérieur de celui-ci. Cette injection se réalise généralement à travers des constructeurs, des méthodes, ou des propriétés.
 
+Cette approche permet de dynamiser la création de relations entre objets en mettant en œuvre le principe de l'inversion de contrôle. Concrètement, elle permet de rendre les dépendances entre les classes moins rigides et plus adaptables à l'exécution du programme.
+
+Les dépendances ne sont donc plus explicitement définies dans le code source, mais plutôt déterminées de manière dynamique lors de l'exécution du programme. Cette souplesse offre un cadre de développement plus flexible, où les changements et les adaptations deviennent plus aisés à effectuer.
+
+L'utilisation de ce design pattern implique souvent l'introduction d'interfaces pour encapsuler les méthodes spécifiques que la classe A peut invoquer sur la classe B. En adoptant cette approche, on signale que la classe B satisfait les exigences de l'interface, permettant ainsi de substituer les références directes à B par des références à l'interface au sein de la classe A.
+
 ## Qu'est-ce qu'une dépendance ?
 
 Une dépendance se produit lorsque l'objet A dépend d'un autre objet B pour que l'objet A puisse être créé. Plusieurs conditions permettent de déterminer si un objet A dépend de B :
@@ -57,12 +63,6 @@ Mais il a aussi la dépendance lorsqu’une méthode de A  appelle une méthode 
 - Flexibilité : L'attribut de dépendance peut contenir n'importe quels objets tant que sa classe implémente l'interface
 #### Désavantages :
 - Complexité : Réduit la clarté du code, surtout dans le cas où il y a plusieurs dépendances.
-
-## Utilisation
-En mettant en œuvre le principe de l'inversion de contrôle, l'injection de dépendances permet de créer dynamiquement les relations entre objets. Ainsi, les
-dépendances ne sont plus statiquement déclarées dans le code, mais déterminées dynamiquement à l'exécution, favorisant une approche plus flexible.
-La solution apportée par l'injection de dépendance implique l'utilisation d'une interface (comme I) pour regrouper les méthodes que A peut appeler sur B. En implémentant cette interface, on indique que B satisfait les exigences de l'interface I, remplaçant ainsi les références directes à B par des références à l'interface dans A. Ensuite, un mécanisme d'injection, tel que l'instanciation directe de B lors de la création de A ou le transfert de B via une méthode de A, permet d'établir la relation de dépendance entre ces objets.
-Ces techniques, cruciales pour la conception modulaire et la facilité de maintenance du code, sont largement utilisées dans les applications basées sur des serveurs d'applications. Ces dernières s'appuient souvent sur des frameworks où l'IoC et la DI simplifient la gestion du flux d'exécution et des dépendances, contribuant ainsi à une architecture logicielle plus souple et évolutive.
 
 ## Exemple d’utilisation d’une injection de dépendance(Injection de dépendance avec un constructeur)
 
