@@ -36,7 +36,8 @@ Cependant, ces classes déjà prédéfinies ne sont que rarement utilisées puis
 ### Exemple :
 
 Voici un exemple d'implémentation du design pattern Observer en utilisant les classes de l'API Java.  
-| ![observer](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/example-java.png?raw=true) |
+
+|![observer](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/example-java.png?raw=true)|
 |----------------------------------------------------------------------------------------------------------------------------|
 
 ## Conclusion :
