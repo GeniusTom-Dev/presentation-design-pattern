@@ -12,6 +12,12 @@ Le principe de l'injection de dépendance (DI - Dependency Injection) en Java es
 
 Dans le contexte de Java, cela implique que les dépendances d'un objet sont injectées en lui plutôt que d'être instanciées à l'intérieur de celui-ci. Cette injection se réalise généralement à travers des constructeurs, des méthodes, ou des propriétés.
 
+Cette approche permet de dynamiser la création de relations entre objets en mettant en œuvre le principe de l'inversion de contrôle. Concrètement, elle permet de rendre les dépendances entre les classes moins rigides et plus adaptables à l'exécution du programme.
+
+Les dépendances ne sont donc plus explicitement définies dans le code source, mais plutôt déterminées de manière dynamique lors de l'exécution du programme. Cette souplesse offre un cadre de développement plus flexible, où les changements et les adaptations deviennent plus aisés à effectuer.
+
+L'utilisation de ce design pattern implique souvent l'introduction d'interfaces pour encapsuler les méthodes spécifiques que la classe A peut invoquer sur la classe B. En adoptant cette approche, on signale que la classe B satisfait les exigences de l'interface, permettant ainsi de substituer les références directes à B par des références à l'interface au sein de la classe A.
+
 ## Qu'est-ce qu'une dépendance ?
 
 Une dépendance se produit lorsque l'objet A dépend d'un autre objet B pour que l'objet A puisse être créé. Plusieurs conditions permettent de déterminer si un objet A dépend de B :
