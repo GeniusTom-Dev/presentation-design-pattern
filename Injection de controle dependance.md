@@ -76,7 +76,7 @@ Mais il a aussi la dépendance lorsqu’une méthode de A  appelle une méthode 
 Le terme peut être interprété comme une forme de renversement de contrôle (Inversion of Control, IoC), où le contrôle du flux d'exécution est déplacé de l'application principale vers un cadre (framework : ensemble de bibliothèques, d'outils et de conventions utilisés pour créer une structure logicielle) ou un système sous-jacent.
 
 ### Principe
-Transférer le contrôle de certaines parties d'un programme à un cadre ou un conteneur, souvent pour améliorer la modularité et la testabilité.
+Le principe est ce créer un conteneur qui va initaliser les objets dont on a besoins. Le conteneur va ensuite réaliser des injections par constructeur afin de créer les dépendances que les différents objets ont entre eux.
 
 ### Utilisation
 Souvent utilisé dans les frameworks et bibliothèques pour standardiser le comportement de certaines fonctions, comme la gestion d'événements ou de requêtes.
