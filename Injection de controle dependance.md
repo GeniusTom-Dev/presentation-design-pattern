@@ -87,14 +87,4 @@ Dans le cas d'utilisation classique où une application interagit avec l'utilisa
 
 | Exemple sans IOC :                                                                                               | Exemple avec IOC :                                                                                               |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
-| ```java
-    public class Voiture {
-
-  private Moteur moteur;
-
-  public Voiture() {
-    this.moteur = new Moteur();
-  }
-}```
-| ![avec-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/avec-ioc.png?raw=true) |
-
+| ![sans-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/sans-ioc.png?raw=true) | ![avec-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/avec-ioc.png?raw=true) |
