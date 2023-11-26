@@ -12,20 +12,44 @@ Lors de la conception d'un programme en Java, une pratique courante consiste à 
 
 ## Qu'est-ce qu'une dépendance ?
 
-Une dépendance se produit lorsque l'objet **A** dépend d'un autre objet **B** pour que l'objet **A** puisse être créé. Plusieurs conditions permettent de déterminer si un objet **A** dépend de **B** :
-La dépendance par composition, lorsque **A** possède un attribut de **B**;
-La dépendance par héritage, lorsque **A** est de type **B**;
-La dépendance par transitivité, lorsque **A** dépend d'un autre objet de type C qui dépend lui-même d'un objet de type **B** ;
-Mais il a aussi la dépendance lorsqu’une méthode de **A**  appelle une méthode de **B**.
+Une dépendance se produit lorsque l'objet A dépend d'un autre objet B pour que l'objet A puisse être créé. Plusieurs conditions permettent de déterminer si un objet A dépend de B :
+- La dépendance par composition, lorsque A possède un attribut de B;
+- La dépendance par héritage, lorsque A est de type B;
+- La dépendance par transitivité, lorsque A dépend d'un autre objet de type C qui dépend lui-même d'un objet de type B ;
 
-|![constrcteur](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/constructeur.png?raw=true)|
-|---|
+Mais il a aussi la dépendance lorsqu’une méthode de A  appelle une méthode de B.
+***
+## Les différentes types d’injection
+
+> Il existe quatre types d'injections de dépendances dans ce contexte :
+### L'injection par constructeur
+
+| ![constructeur](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/constructeur.png?raw=true) |
+|--------------------------------------------------------------------------------------------------------------------------|
+
+#### Avantages :
+- Clarté du code : les dépendances sont explicitement spécifié dans le constructeur ce qui rend le code plus lisible
+- Evite les dépendances nulles
+- Facilité de test : Il est facile de simuler des situations différentes en donnant des mocks au constructeur  
+#### Désavantages :
+- Complexité quand il y a un grand nombre de dépendances
+- Tout changement dans les dépendances nécessite la modification du constructeur
+
+### L'injection par interface
+
+| ![interfaceInjection](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/interfaceInjection.png?raw=true) |
+|--------------------------------------------------------------------------------------------------------------------------------------|
+
+
+### L'injection par mutateur
+> Un mutateur est une méthode de la classe qui permet de modifier la valeur d’un attribut
+
+| ![interfaceInjection](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/interfaceInjection.png?raw=true) |
+|--------------------------------------------------------------------------------------------------------------------------------------|
 
 
 
 
-[//]: # (| Exemple sans Injection de dépendance                                                                           | Exemple avec Injection de dépendance                                                                           |)
 
-[//]: # (|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|)
 
-[//]: # (| ![sans-di]&#40;https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/sans-di.png?raw=true&#41; | ![avec-di]&#40;https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/avec-di.png?raw=true&#41; |)
+
