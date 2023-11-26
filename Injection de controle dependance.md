@@ -64,14 +64,6 @@ Mais il a aussi la dépendance lorsqu’une méthode de A  appelle une méthode 
 #### Désavantages :
 - Complexité : Réduit la clarté du code, surtout dans le cas où il y a plusieurs dépendances.
 
-## Utilisation
-
-L'injection de dépendances, dans le cadre de la programmation en Java, est une approche qui dynamise la création de relations entre objets en mettant en œuvre le principe de l'inversion de contrôle. Concrètement, elle permet de rendre les dépendances entre les classes moins rigides et plus adaptables à l'exécution du programme.
-
-L'essence de l'injection de dépendance réside dans le fait que les dépendances ne sont plus explicitement définies dans le code source, mais plutôt déterminées de manière dynamique lors de l'exécution du programme. Cette souplesse offre un cadre de développement plus flexible, où les changements et les adaptations deviennent plus aisés à effectuer.
-
-L'utilisation de ce design pattern implique souvent l'introduction d'interfaces pour encapsuler les méthodes spécifiques que la classe A peut invoquer sur la classe B. En adoptant cette approche, on signale que la classe B satisfait les exigences de l'interface, permettant ainsi de substituer les références directes à B par des références à l'interface au sein de la classe A.
-
 ## Exemple d’utilisation d’une injection de dépendance(Injection de dépendance avec un constructeur)
 
 |Exemple sans DI : | Exemple avec DI : |
