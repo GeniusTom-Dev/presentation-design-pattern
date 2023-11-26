@@ -44,12 +44,38 @@ Mais il a aussi la dépendance lorsqu’une méthode de A  appelle une méthode 
 ### L'injection par mutateur
 > Un mutateur est une méthode de la classe qui permet de modifier la valeur d’un attribut
 
-| ![interfaceInjection](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/interfaceInjection.png?raw=true) |
+| ![mutateurInjection](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/mutateurInjection.png?raw=true) |
 |--------------------------------------------------------------------------------------------------------------------------------------|
 
 
+## Utilisation
+En mettant en œuvre le principe de l'inversion de contrôle, l'injection de dépendances permet de créer dynamiquement les relations entre objets. Ainsi, les
+dépendances ne sont plus statiquement déclarées dans le code, mais déterminées dynamiquement à l'exécution, favorisant une approche plus flexible.
+La solution apportée par l'injection de dépendance implique l'utilisation d'une interface (comme I) pour regrouper les méthodes que A peut appeler sur B. En implémentant cette interface, on indique que B satisfait les exigences de l'interface I, remplaçant ainsi les références directes à B par des références à l'interface dans A. Ensuite, un mécanisme d'injection, tel que l'instanciation directe de B lors de la création de A ou le transfert de B via une méthode de A, permet d'établir la relation de dépendance entre ces objets.
+Ces techniques, cruciales pour la conception modulaire et la facilité de maintenance du code, sont largement utilisées dans les applications basées sur des serveurs d'applications. Ces dernières s'appuient souvent sur des frameworks où l'IoC et la DI simplifient la gestion du flux d'exécution et des dépendances, contribuant ainsi à une architecture logicielle plus souple et évolutive.
 
+## Exemple d’utilisation d’une injection de dépendance(Injection de dépendance avec un constructeur)
 
+|Exemple sans DI : | Exemple avec DI : |
+|---|---|
+| ![sans-di](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/sans-di.png?raw=true) | ![avec-di](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/avec-di.png?raw=true) |
 
+## Injection de Contrôle (IoC)
 
+### Définition
+Le terme peut être interprété comme une forme de renversement de contrôle (Inversion of Control, IoC), où le contrôle du flux d'exécution est déplacé de l'application principale vers un cadre (framework : ensemble de bibliothèques, d'outils et de conventions utilisés pour créer une structure logicielle) ou un système sous-jacent.
+
+### Principe
+Transférer le contrôle de certaines parties d'un programme à un cadre ou un conteneur, souvent pour améliorer la modularité et la testabilité.
+
+### Utilisation
+Souvent utilisé dans les frameworks et bibliothèques pour standardiser le comportement de certaines fonctions, comme la gestion d'événements ou de requêtes.
+
+Elle constitue une approche majeure dans le développement logiciel. Elle déplace le contrôle du flux d'exécution d'une application du code applicatif vers un framework ou une couche logicielle sous-jacente. Cette méthode permet à l'application de définir des blocs de code à utiliser via une interface fournie par le framework, allégeant ainsi le programme principal de la gestion directe du flux d'exécution.
+
+Dans le cas d'utilisation classique où une application interagit avec l'utilisateur pour obtenir des informations, l'approche traditionnelle implique que le programme contrôle non seulement l'interface homme-machine (IHM : la manière dont les utilisateurs interagissent avec une application logicielle via des interfaces visuelles ou des commandes) mais aussi la séquence d'exécution. En revanche, avec l'IoC, le framework prend en charge la gestion du flux d'exécution tandis que le programme principal se concentre sur le traitement et les composants IHM. Cette séparation permet une meilleure organisation du code et facilite sa maintenance.
+
+| Exemple sans IOC :                                                                                               | Exemple avec IOC :                                                                                               |
+|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| ![sans-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/sans-ioc.png?raw=true) | ![avec-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/avec-ioc.png?raw=true) |
 
