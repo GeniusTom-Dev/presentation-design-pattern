@@ -97,6 +97,7 @@ Dans le cas d'utilisation classique où une application interagit avec l'utilisa
 | Exemple sans IOC :                                                                                               | Exemple avec IOC :                                                                                               |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | ![sans-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/voiture-sans.png?raw=true) | ![avec-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/voiture-avec.png?raw=true) |
+| ![sans-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/voiture-sans2.png?raw=true) | ![avec-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/voiture-avec2.png?raw=true) |
 
 
 ## Sources
