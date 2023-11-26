@@ -8,7 +8,9 @@
 
 ## Injection de dépendance (DI) :
 
-Lors de la conception d'un programme en Java, une pratique courante consiste à structurer le code en plusieurs classes, chacune ayant son fichier dédié. Bien que cette approche vise à rendre le code plus lisible et plus facile à entretenir, elle peut rendre délicate la substitution d'une classe par une autre. Pour remédier à ce problème, particulièrement en Java, l'injection de dépendance est souvent utilisée. Elle facilite grandement le remplacement d'une classe par une autre et autorise la configuration de diverses options pour l'application.
+Le principe de l'injection de dépendance (DI - Dependency Injection) en Java est une technique de conception visant à réduire le couplage entre les différentes parties d'un programme. Son principe fondamental est de fournir les dépendances nécessaires à un objet plutôt que de les laisser créer ces dépendances elles-mêmes.
+
+Dans le contexte de Java, cela signifie que les dépendances d'un objet sont injectées dans cet objet au lieu d'être créées à l'intérieur de cet objet. Cela se fait généralement par le biais de constructeurs, de méthodes, ou de propriétés.
 
 ## Qu'est-ce qu'une dépendance ?
 
