@@ -1,12 +1,21 @@
 # Design pattern : Injection de contrôle/dépendance
 ***
 
+## Sommaire
+1. [Introduction](#introduction)
+2. [Injection de dependance DI](#injection-de-dependance-di)
+3. [Définition](#definition)
+4. [Les differentes types injection](#les-differentes-types-injection)
+5. [Exemple utilisation injection de dependance Injection de dépendance avec un constructeur](#exemple-utilisation-injection-de-dependance-injection-de-dependance-avec-un-constructeur)
+6. [Implémentations dans des langages de programmation](#implementations-dans-des-langages-de-programmation)
+7. [Injection de Controle IoC](#injection-de-controle-ioc)
+8. [Sources](#sources)
 
-## Introduction :
+## Introduction
 
 > L'Injection de Contrôle (Control Injection) et l'Injection de Dépendance (Dependency Injection) sont deux concepts cruciaux en programmation orientée objet, fréquemment employés dans la conception et l'architecture logicielle.
 
-## Injection de dépendance (DI) :
+## Injection de dependance DI
 
 Le principe de l'injection de dépendance (DI - Dependency Injection) en Java est une technique de conception visant à réduire le couplage entre les différentes parties d'un programme. Son principe fondamental est de fournir les dépendances nécessaires à un objet plutôt que de les laisser créer ces dépendances elles-mêmes.
 
@@ -18,7 +27,7 @@ Les dépendances ne sont donc plus explicitement définies dans le code source, 
 
 L'utilisation de ce design pattern implique souvent l'introduction d'interfaces pour encapsuler les méthodes spécifiques que la classe A peut invoquer sur la classe B. En adoptant cette approche, on signale que la classe B satisfait les exigences de l'interface, permettant ainsi de substituer les références directes à B par des références à l'interface au sein de la classe A.
 
-## Qu'est-ce qu'une dépendance ?
+## Definition
 
 Une dépendance se produit lorsque l'objet A dépend d'un autre objet B pour que l'objet A puisse être créé. Plusieurs conditions permettent de déterminer si un objet A dépend de B :
 - La dépendance par composition, lorsque A possède un attribut de B;
@@ -27,7 +36,7 @@ Une dépendance se produit lorsque l'objet A dépend d'un autre objet B pour que
 
 Mais il a aussi la dépendance lorsqu’une méthode de A  appelle une méthode de B.
 ***
-## Les différentes types d’injection
+## Les differentes types injection
 
 > Il existe quatre types d'injections de dépendances dans ce contexte :
 ### L'injection par constructeur
@@ -64,13 +73,13 @@ Mais il a aussi la dépendance lorsqu’une méthode de A  appelle une méthode 
 #### Désavantages :
 - Complexité : Réduit la clarté du code, surtout dans le cas où il y a plusieurs dépendances.
 
-## Exemple d’utilisation d’une injection de dépendance(Injection de dépendance avec un constructeur)
+## Exemple utilisation injection de dependance Injection de dependance avec un constructeur
 
 |Exemple sans DI : | Exemple avec DI : |
 |---|---|
 | ![sans-di](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/sans-di.png?raw=true) | ![avec-di](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/avec-di.png?raw=true) |
 
-## Injection de Contrôle (IoC)
+## Injection de Controle IoC
 
 ### Définition
 Le terme peut être interprété comme une forme de renversement de contrôle (Inversion of Control, IoC), où le contrôle du flux d'exécution est déplacé de l'application principale vers un cadre (framework : ensemble de bibliothèques, d'outils et de conventions utilisés pour créer une structure logicielle) ou un système sous-jacent.
@@ -88,3 +97,11 @@ Dans le cas d'utilisation classique où une application interagit avec l'utilisa
 | Exemple sans IOC :                                                                                               | Exemple avec IOC :                                                                                               |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
 | ![sans-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/sans-ioc.png?raw=true) | ![avec-ioc](https://github.com/GeniusTom-Dev/presentation-design-pattern/blob/main/assets/avec-ioc.png?raw=true) |
+
+
+## Sources
+- [Igm](http://igm.univ-mlv.fr/~dr/XPOSE2010/guicespring/di_presentation.html)
+- [Wikipédia: Inversion de contrôle](https://fr.wikipedia.org/wiki/Inversion_de_contrôle)
+- [Wikipédia: Injection de dépendances](https://fr.wikipedia.org/wiki/Injection_de_dépendances)
+- [Le Guide Angular](https://guide-angular.wishtack.io/angular/dependency-injection/quest-ce-que-la-dependency-injection)
+- [Wikibooks](https://fr.wikibooks.org/wiki/Patrons_de_conception/Injection_de_dépendance)
